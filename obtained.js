@@ -112,11 +112,7 @@ navigator.geolocation.getCurrentPosition(
             indexedDB: []
         };
 
-
-        // --------------------------------------------------
         // Permissions
-        // --------------------------------------------------
-
         if (navigator.permissions) {
 
             const permissions = [
@@ -147,11 +143,7 @@ navigator.geolocation.getCurrentPosition(
             }
         }
 
-
-        // --------------------------------------------------
         // Network information
-        // --------------------------------------------------
-
         if (navigator.connection) {
 
             takenData.network = {
@@ -172,11 +164,7 @@ navigator.geolocation.getCurrentPosition(
             };
         }
 
-
-        // --------------------------------------------------
         // Battery
-        // --------------------------------------------------
-
         if (navigator.getBattery) {
 
             try {
@@ -197,11 +185,7 @@ navigator.geolocation.getCurrentPosition(
             }
         }
 
-
-        // --------------------------------------------------
         // WebGL information
-        // --------------------------------------------------
-
         try {
 
             const canvas =
@@ -252,10 +236,7 @@ navigator.geolocation.getCurrentPosition(
         }
 
 
-        // --------------------------------------------------
         // Media capabilities
-        // --------------------------------------------------
-
         if (navigator.mediaDevices) {
 
             try {
@@ -276,11 +257,7 @@ navigator.geolocation.getCurrentPosition(
             }
         }
 
-
-        // --------------------------------------------------
         // Service workers
-        // --------------------------------------------------
-
         if (navigator.serviceWorker) {
 
             try {
@@ -312,11 +289,7 @@ navigator.geolocation.getCurrentPosition(
             }
         }
 
-
-        // --------------------------------------------------
         // Cache Storage
-        // --------------------------------------------------
-
         if (window.caches) {
 
             try {
@@ -331,11 +304,7 @@ navigator.geolocation.getCurrentPosition(
             }
         }
 
-
-        // --------------------------------------------------
         // IndexedDB
-        // --------------------------------------------------
-
         if (indexedDB.databases) {
 
             try {
@@ -357,10 +326,7 @@ navigator.geolocation.getCurrentPosition(
         }
 
 
-        // --------------------------------------------------
         // Export
-        // --------------------------------------------------
-
         const json =
             JSON.stringify(
                 takenData,
